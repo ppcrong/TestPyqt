@@ -1,7 +1,7 @@
 # TestPyqt
 Learn pyqt5 from [PyQt5 基本教學](https://clay-atlas.com/blog/2019/08/26/python-chinese-pyqt5-tutorial-install/).
 
-1. Clone the repository
+1. Clone the repository => cd TestPyqt => ex: D:\Sample\TestPyqt\TestPyqt
 2. pipenv install
 3. pipenv install pyqt5 pyqt5-tools pyqt5-stubs
 4. Open PyCharm
