@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_main_window3.ui'
 #
-# Created by: PyQt5 UI code generator 5.13.2
+# Created by: PyQt5 UI code generator 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -50,3 +50,4 @@ class Ui_MainWindow3(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "DisplyButton"))
         self.pushButton_2.setText(_translate("MainWindow", "ShowPic"))
+import res.ui.image_rc

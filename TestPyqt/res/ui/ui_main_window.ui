@@ -71,7 +71,7 @@
        <x>0</x>
        <y>0</y>
        <width>111</width>
-       <height>409</height>
+       <height>411</height>
       </rect>
      </property>
      <attribute name="label">
@@ -109,8 +109,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>85</width>
-       <height>409</height>
+       <width>98</width>
+       <height>28</height>
       </rect>
      </property>
      <attribute name="label">
@@ -140,21 +140,35 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNew_File">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/Python_PyQt5.png</normaloff>:/image/Python_PyQt5.png</iconset>
+   </property>
    <property name="text">
     <string>New File</string>
    </property>
   </action>
   <action name="actionOpen_File">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/Cancel.png</normaloff>:/image/Cancel.png</iconset>
+   </property>
    <property name="text">
     <string>Open File</string>
    </property>
   </action>
   <action name="actionClose">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/Cancel.png</normaloff>:/image/Cancel.png</iconset>
+   </property>
    <property name="text">
     <string>Close</string>
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_main_window.ui'
 #
-# Created by: PyQt5 UI code generator 5.13.2
+# Created by: PyQt5 UI code generator 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -29,7 +29,7 @@ class Ui_MainWindow(object):
         self.toolBox.setGeometry(QtCore.QRect(664, 20, 111, 471))
         self.toolBox.setObjectName("toolBox")
         self.page = QtWidgets.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 111, 409))
+        self.page.setGeometry(QtCore.QRect(0, 0, 111, 411))
         self.page.setObjectName("page")
         self.toolButton = QtWidgets.QToolButton(self.page)
         self.toolButton.setGeometry(QtCore.QRect(10, 0, 81, 51))
@@ -39,7 +39,7 @@ class Ui_MainWindow(object):
         self.toolButton_2.setObjectName("toolButton_2")
         self.toolBox.addItem(self.page, "")
         self.page_2 = QtWidgets.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 85, 409))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 98, 28))
         self.page_2.setObjectName("page_2")
         self.toolBox.addItem(self.page_2, "")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -53,10 +53,17 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
         self.actionNew_File = QtWidgets.QAction(MainWindow)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/image/Python_PyQt5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionNew_File.setIcon(icon)
         self.actionNew_File.setObjectName("actionNew_File")
         self.actionOpen_File = QtWidgets.QAction(MainWindow)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/image/Cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionOpen_File.setIcon(icon1)
         self.actionOpen_File.setObjectName("actionOpen_File")
         self.actionClose = QtWidgets.QAction(MainWindow)
+        self.actionClose.setIcon(icon1)
         self.actionClose.setObjectName("actionClose")
         self.menu.addAction(self.actionNew_File)
         self.menu.addAction(self.actionOpen_File)
@@ -81,3 +88,4 @@ class Ui_MainWindow(object):
         self.actionNew_File.setText(_translate("MainWindow", "New File"))
         self.actionOpen_File.setText(_translate("MainWindow", "Open File"))
         self.actionClose.setText(_translate("MainWindow", "Close"))
+import res.ui.image_rc

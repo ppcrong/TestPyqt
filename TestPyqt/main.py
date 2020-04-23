@@ -11,10 +11,10 @@ from PyQt5.QtWidgets import QShortcut, QWidget, QColorDialog, QLabel, QLineEdit,
 
 print('__file__={0:<35} | __name__={1:<20} | __package__={2:<20}'.format(__file__, __name__, str(__package__)))
 
-from ui import Ui_MainWindow
-from ui import Ui_MainWindow2
-from ui import Ui_MainWindow3
-from ui import Ui_MainWindow4
+from res.ui import Ui_MainWindow
+from res.ui import Ui_MainWindow2
+from res.ui import Ui_MainWindow3
+from res.ui import Ui_MainWindow4
 from util import printHello
 
 
@@ -40,11 +40,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.statusBar().showMessage('TEST Again!!!')
 
         # Set Window Icon
-        self.setWindowIcon(QtGui.QIcon('pic/Python_PyQt5.png'))
+        self.setWindowIcon(QtGui.QIcon(':/image/Python_PyQt5.png'))
 
         # Pixmap
         image = QtGui.QPixmap()
-        image.load('pic/Python_PyQt5.png')
+        image.load(':/image/Python_PyQt5.png')
         image = image.scaled(self.width(), self.height())
 
         # Palette
@@ -59,11 +59,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.retranslateUi(self)
         self.ui.actionClose.setShortcut('Ctrl+Q')
         self.ui.actionClose.triggered.connect(self.exit)
-        self.ui.actionClose.setIcon(QtGui.QIcon('pic/Cancel.png'))
+        self.ui.actionClose.setIcon(QtGui.QIcon(':/image/Cancel.png'))
 
         # ToolBar
         self.ui.toolButton.setShortcut('Ctrl+E')
-        self.ui.toolButton.setIcon(QtGui.QIcon('pic/Cancel.png'))
+        self.ui.toolButton.setIcon(QtGui.QIcon(':/image/Cancel.png'))
         self.ui.toolButton.clicked.connect(self.exit)
 
         # ToolBar2
