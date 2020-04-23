@@ -108,7 +108,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def trigger_english(self):
         print("[MainWindow] Change to English")
-        self.ui.trans.load("res/ui/lang_en")
+        self.ui.trans.load(":/lang/lang_en")
         _app = QCoreApplication.instance()
         _app.installTranslator(self.ui.trans)
         try:
@@ -118,7 +118,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def trigger_zh_tw(self):
         print("[MainWindow] Change to zh_tw")
-        self.ui.trans.load("res/ui/lang_zh_tw")
+        self.ui.trans.load(":/lang/lang_zh_tw")
         _app = QCoreApplication.instance()
         _app.installTranslator(self.ui.trans)
         try:

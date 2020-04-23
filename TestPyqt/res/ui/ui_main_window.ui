@@ -192,6 +192,7 @@
  </widget>
  <resources>
   <include location="image.qrc"/>
+  <include location="lang.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -99,3 +99,4 @@ class Ui_MainWindow(object):
         self.actionOpen_File.setText(_translate("MainWindow", "Open File"))
         self.actionClose.setText(_translate("MainWindow", "Close"))
 import res.ui.image_rc
+import res.ui.lang_rc
