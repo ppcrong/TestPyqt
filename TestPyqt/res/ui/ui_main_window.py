@@ -39,7 +39,7 @@ class Ui_MainWindow(object):
         self.toolButton_2.setObjectName("toolButton_2")
         self.toolBox.addItem(self.page, "")
         self.page_2 = QtWidgets.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 111, 411))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 98, 28))
         self.page_2.setObjectName("page_2")
         self.toolBox.addItem(self.page_2, "")
         self.splitter = QtWidgets.QSplitter(self.centralwidget)
@@ -62,12 +62,12 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.actionNew_File = QtWidgets.QAction(MainWindow)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/image/Python_PyQt5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/Python_PyQt5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionNew_File.setIcon(icon)
         self.actionNew_File.setObjectName("actionNew_File")
         self.actionOpen_File = QtWidgets.QAction(MainWindow)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/image/Cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(":/Cancel.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionOpen_File.setIcon(icon1)
         self.actionOpen_File.setObjectName("actionOpen_File")
         self.actionClose = QtWidgets.QAction(MainWindow)
@@ -98,5 +98,5 @@ class Ui_MainWindow(object):
         self.actionNew_File.setText(_translate("MainWindow", "New File"))
         self.actionOpen_File.setText(_translate("MainWindow", "Open File"))
         self.actionClose.setText(_translate("MainWindow", "Close"))
-import res.ui.image_rc
-import res.ui.lang_rc
+import res.image._image_rc
+import res.lang._lang_rc

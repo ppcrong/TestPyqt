@@ -1,0 +1,6 @@
+<RCC>
+  <qresource>
+    <file>lang_en.qm</file>
+    <file>lang_zh_tw.qm</file>
+  </qresource>
+</RCC>

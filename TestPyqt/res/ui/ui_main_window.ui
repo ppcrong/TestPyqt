@@ -109,8 +109,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>111</width>
-       <height>411</height>
+       <width>98</width>
+       <height>28</height>
       </rect>
      </property>
      <attribute name="label">
@@ -164,8 +164,8 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNew_File">
    <property name="icon">
-    <iconset resource="image.qrc">
-     <normaloff>:/image/Python_PyQt5.png</normaloff>:/image/Python_PyQt5.png</iconset>
+    <iconset resource="../image/_image.qrc">
+     <normaloff>:/Python_PyQt5.png</normaloff>:/Python_PyQt5.png</iconset>
    </property>
    <property name="text">
     <string>New File</string>
@@ -173,8 +173,8 @@
   </action>
   <action name="actionOpen_File">
    <property name="icon">
-    <iconset resource="image.qrc">
-     <normaloff>:/image/Cancel.png</normaloff>:/image/Cancel.png</iconset>
+    <iconset resource="../image/_image.qrc">
+     <normaloff>:/Cancel.png</normaloff>:/Cancel.png</iconset>
    </property>
    <property name="text">
     <string>Open File</string>
@@ -182,8 +182,8 @@
   </action>
   <action name="actionClose">
    <property name="icon">
-    <iconset resource="image.qrc">
-     <normaloff>:/image/Cancel.png</normaloff>:/image/Cancel.png</iconset>
+    <iconset resource="../image/_image.qrc">
+     <normaloff>:/Cancel.png</normaloff>:/Cancel.png</iconset>
    </property>
    <property name="text">
     <string>Close</string>
@@ -191,8 +191,8 @@
   </action>
  </widget>
  <resources>
-  <include location="image.qrc"/>
-  <include location="lang.qrc"/>
+  <include location="../image/_image.qrc"/>
+  <include location="../lang/_lang.qrc"/>
  </resources>
  <connections/>
 </ui>

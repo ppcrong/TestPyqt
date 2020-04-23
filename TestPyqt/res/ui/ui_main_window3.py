@@ -50,4 +50,4 @@ class Ui_MainWindow3(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "DisplyButton"))
         self.pushButton_2.setText(_translate("MainWindow", "ShowPic"))
-import res.ui.image_rc
+import res.image._image_rc

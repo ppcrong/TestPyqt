@@ -42,11 +42,11 @@ class MainWindow(QtWidgets.QMainWindow):
         # self.ui.statusbar.showMessage('TEST Again!!!') # also work
 
         # Set Window Icon
-        self.setWindowIcon(QtGui.QIcon(':/image/Python_PyQt5.png'))
+        self.setWindowIcon(QtGui.QIcon(':/Python_PyQt5.png'))
 
         # Pixmap
         image = QtGui.QPixmap()
-        image.load(':/image/Python_PyQt5.png')
+        image.load(':/Python_PyQt5.png')
         image = image.scaled(self.width(), self.height())
 
         # Palette
@@ -61,11 +61,11 @@ class MainWindow(QtWidgets.QMainWindow):
         # self.ui.retranslateUi(self) # this line will cause window title to overwrite setWindowTitle above
         self.ui.actionClose.setShortcut('Ctrl+Q')
         self.ui.actionClose.triggered.connect(self.exit)
-        self.ui.actionClose.setIcon(QtGui.QIcon(':/image/Cancel.png'))
+        self.ui.actionClose.setIcon(QtGui.QIcon(':/Cancel.png'))
 
         # ToolBar
         self.ui.toolButton.setShortcut('Ctrl+E')
-        self.ui.toolButton.setIcon(QtGui.QIcon(':/image/Cancel.png'))
+        self.ui.toolButton.setIcon(QtGui.QIcon(':/Cancel.png'))
         self.ui.toolButton.clicked.connect(self.exit)
 
         # ToolBar2
@@ -108,7 +108,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def trigger_english(self):
         print("[MainWindow] Change to English")
-        self.ui.trans.load(":/lang/lang_en")
+        self.ui.trans.load(":/lang_en")
         _app = QCoreApplication.instance()
         _app.installTranslator(self.ui.trans)
         try:
@@ -118,7 +118,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def trigger_zh_tw(self):
         print("[MainWindow] Change to zh_tw")
-        self.ui.trans.load(":/lang/lang_zh_tw")
+        self.ui.trans.load(":/lang_zh_tw")
         _app = QCoreApplication.instance()
         _app.installTranslator(self.ui.trans)
         try:
