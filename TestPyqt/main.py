@@ -1,4 +1,7 @@
+import os
+import platform
 import sys
+from pathlib import Path
 
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtCore import *
@@ -63,6 +66,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.toolButton.setIcon(QtGui.QIcon('pic/Cancel.png'))
         self.ui.toolButton.clicked.connect(self.exit)
 
+        # ToolBar2
+        self.ui.toolButton_2.clicked.connect(self.onMenuAbout)
+
     def button_clicked(self):
         text = self.ui.lineEdit.text()
         self.ui.label.setText(text)
@@ -76,6 +82,22 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def exit(self):
         app.exit()
+
+    def onMenuAbout(self):
+        QCoreApplication.setApplicationName('TestPyqt')
+        QCoreApplication.setApplicationVersion('1.0.0')
+        app_name = QCoreApplication.applicationName()
+        app_version = QCoreApplication.applicationVersion()
+        title = self.tr('About %s') % (app_name)
+        text = self.tr("%s %s\n\nThe test app\n\n"
+                       ) % (app_name, app_version)
+        text += self.tr('Platform: %s\n') % (platform.platform())
+        text += self.tr('Home data path: %s\n') % (Path.home())
+        text += self.tr('Application data path: %s\n') % (os.path.dirname(os.path.abspath(__file__)))
+        text += self.tr('\n')
+        text += self.tr('Python: %s\n') % platform.python_version()
+        text += self.tr('PyQt5: %s\n') % QtCore.PYQT_VERSION_STR
+        QtWidgets.QMessageBox.about(self, title, text)
 
 
 class MainWindow2(QtWidgets.QMainWindow):
