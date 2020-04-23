@@ -38,6 +38,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
         # StatusBar
         self.statusBar().showMessage('TEST Again!!!')
+        self.statusBar().setStyleSheet("color: red")
+        # self.ui.statusbar.showMessage('TEST Again!!!') # also work
 
         # Set Window Icon
         self.setWindowIcon(QtGui.QIcon(':/image/Python_PyQt5.png'))
@@ -56,7 +58,7 @@ class MainWindow(QtWidgets.QMainWindow):
         # self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
 
         # Menu
-        self.ui.retranslateUi(self)
+        # self.ui.retranslateUi(self) # this line will cause window title to overwrite setWindowTitle above
         self.ui.actionClose.setShortcut('Ctrl+Q')
         self.ui.actionClose.triggered.connect(self.exit)
         self.ui.actionClose.setIcon(QtGui.QIcon(':/image/Cancel.png'))
@@ -68,6 +70,11 @@ class MainWindow(QtWidgets.QMainWindow):
 
         # ToolBar2
         self.ui.toolButton_2.clicked.connect(self.onMenuAbout)
+
+        # translator
+        self.ui.trans = QTranslator()
+        self.ui.btnChinese.clicked.connect(self.trigger_zh_tw)
+        self.ui.btnEnglish.clicked.connect(self.trigger_english)
 
     def button_clicked(self):
         text = self.ui.lineEdit.text()
@@ -99,6 +106,25 @@ class MainWindow(QtWidgets.QMainWindow):
         text += self.tr('PyQt5: %s\n') % QtCore.PYQT_VERSION_STR
         QtWidgets.QMessageBox.about(self, title, text)
 
+    def trigger_english(self):
+        print("[MainWindow] Change to English")
+        self.ui.trans.load("res/ui/lang_en")
+        _app = QCoreApplication.instance()
+        _app.installTranslator(self.ui.trans)
+        try:
+            self.ui.retranslateUi(self)
+        except Exception as e:
+            print(e)
+
+    def trigger_zh_tw(self):
+        print("[MainWindow] Change to zh_tw")
+        self.ui.trans.load("res/ui/lang_zh_tw")
+        _app = QCoreApplication.instance()
+        _app.installTranslator(self.ui.trans)
+        try:
+            self.ui.retranslateUi(self)
+        except Exception as e:
+            print(e)
 
 class MainWindow2(QtWidgets.QMainWindow):
     def __init__(self):

@@ -109,13 +109,36 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>98</width>
-       <height>28</height>
+       <width>111</width>
+       <height>411</height>
       </rect>
      </property>
      <attribute name="label">
       <string>Page 2</string>
      </attribute>
+    </widget>
+   </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>370</y>
+      <width>93</width>
+      <height>56</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QPushButton" name="btnChinese">
+     <property name="text">
+      <string>Chinese</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnEnglish">
+     <property name="text">
+      <string>English</string>
+     </property>
     </widget>
    </widget>
   </widget>
