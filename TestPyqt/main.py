@@ -16,6 +16,7 @@ from res.ui import Ui_MainWindow2
 from res.ui import Ui_MainWindow3
 from res.ui import Ui_MainWindow4
 from util import printHello
+from util import TestThread
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -66,7 +67,7 @@ class MainWindow(QtWidgets.QMainWindow):
         # ToolBar
         self.ui.toolButton.setShortcut('Ctrl+E')
         self.ui.toolButton.setIcon(QtGui.QIcon(':/Cancel.png'))
-        self.ui.toolButton.clicked.connect(self.exit)
+        self.ui.toolButton.clicked.connect(self.test_thread_update_signal)
 
         # ToolBar2
         self.ui.toolButton_2.clicked.connect(self.onMenuAbout)
@@ -75,6 +76,10 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.trans = QTranslator()
         self.ui.btnChinese.clicked.connect(self.trigger_zh_tw)
         self.ui.btnEnglish.clicked.connect(self.trigger_english)
+
+        # QThread
+        self.test_thread = TestThread()
+        self.test_thread.update.connect(self.update_by_thread)
 
     def button_clicked(self):
         text = self.ui.lineEdit.text()
@@ -125,6 +130,13 @@ class MainWindow(QtWidgets.QMainWindow):
             self.ui.retranslateUi(self)
         except Exception as e:
             print(e)
+
+    def test_thread_update_signal(self):
+        self.test_thread.start()
+
+    def update_by_thread(self, data):
+        self.ui.label.setText(str(data))
+
 
 class MainWindow2(QtWidgets.QMainWindow):
     def __init__(self):
