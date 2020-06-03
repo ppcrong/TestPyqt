@@ -16,13 +16,14 @@
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string notr="true">QWidget#centralwidget{
-    background:#2094D6;
-    border-top:1px solid darkGray;
-    border-bottom:1px solid darkGray;
-    border-right:1px solid darkGray;
-    border-top-right-radius:6px;
-    border-bottom-right-radius:6px;
-}</string>
+                    background:#2094D6;
+                    border-top:1px solid darkGray;
+                    border-bottom:1px solid darkGray;
+                    border-right:1px solid darkGray;
+                    border-top-right-radius:6px;
+                    border-bottom-right-radius:6px;
+                    }
+                </string>
    </property>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
@@ -35,38 +36,40 @@
     </property>
     <property name="styleSheet">
      <string notr="true">/* The tab widget frame */
-QTabWidget:pane {
-    border: none;
-    background-color: transparent;
-}
+                                            QTabWidget:pane {
+                                            border: none;
+                                            background-color: rgba(16,21,102,100);
+                                            border-top-left-radius: 8px;
+                                            border-bottom-left-radius: 8px;
+                                            }
 
-QTabWidget:tab-bar {
-    alignment: left;
-}
+                                            QTabWidget:tab-bar {
+                                            alignment: left;
+                                            }
 
-/* Style the tab using the tab sub-control. Note that
-it reads QTabBar _not_ QTabWidget */
-QTabBar:tab {
-    background: rgba(255,255,255,40);
-    min-width: 8ex;
-    min-height: 30ex;
-    color:#BFBFBF;
-    font-size:14px;
-    font-weight:200;
-    font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
+                                            /* Style the tab using the tab sub-control. Note that
+                                            it reads QTabBar _not_ QTabWidget */
+                                            QTabBar:tab {
+                                            background: rgba(255,255,255,40);
+                                            min-width: 8ex;
+                                            min-height: 30ex;
+                                            color:#BFBFBF;
+                                            font-size:14px;
+                                            font-weight:200;
+                                            font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+                                            border-top-right-radius: 8px;
+                                            border-bottom-right-radius: 8px;
+                                            }
 
-QTabBar:tab:selected {
-    background: rgba(16,21,102,100);
-    color:white;
-}
+                                            QTabBar:tab:selected {
+                                            background: rgba(16,21,102,100);
+                                            color:white;
+                                            }
 
-QTabBar:tab:hover {
-    background: rgba(16,21,102,30);
-}
-</string>
+                                            QTabBar:tab:hover {
+                                            background: rgba(16,21,102,30);
+                                            }
+                                        </string>
     </property>
     <property name="tabPosition">
      <enum>QTabWidget::East</enum>
@@ -75,22 +78,123 @@ QTabBar:tab:hover {
      <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
+     <property name="styleSheet">
+      <string notr="true">                                QPushButton{
+                                border:none;
+                                color:white;
+                                font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+                                text-align:left;
+                                padding: 5px;
+                                }
+
+                                QPushButton:disabled{color:#BFBFBF;}
+                                QPushButton#btn_1:hover{border-left:4px solid red;font-weight:700;}
+                                QPushButton#btn_2:hover{border-left:4px solid red;font-weight:700;}
+                                QPushButton#btn_3:hover{border-left:4px solid red;font-weight:700;}
+                                QPushButton#btn_4:hover{border-left:4px solid red;font-weight:700;}
+
+</string>
+     </property>
      <attribute name="title">
       <string>INFERENCE</string>
      </attribute>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>100</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>PushButton</string>
-      </property>
-     </widget>
+     <layout class="QGridLayout" name="layout_tab" rowstretch="1,1,1,1,1">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="btn_1">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>btn_1</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>:/ic_raw.svg</normaloff>:/ic_raw.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="btn_2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>btn_2</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>:/ic_image.svg</normaloff>:/ic_image.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="btn_3">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>btn_3</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>:/ic_image_folder.svg</normaloff>:/ic_image_folder.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="btn_4">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>btn_4</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>:/ic_json.svg</normaloff>:/ic_json.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_empty_inf"/>
+      </item>
+     </layout>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
