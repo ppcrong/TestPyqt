@@ -3,3 +3,4 @@ from res.ui.ui_main_window import Ui_MainWindow
 from res.ui.ui_main_window2 import Ui_MainWindow2
 from res.ui.ui_main_window3 import Ui_MainWindow3
 from res.ui.ui_main_window4 import Ui_MainWindow4
+from res.ui.ui_main_window6 import Ui_MainWindow6

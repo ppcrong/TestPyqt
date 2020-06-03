@@ -9,14 +9,13 @@ from PyQt5.QtCore import QTimer
 from PyQt5.QtGui import QKeySequence
 from PyQt5.QtWidgets import QShortcut, QWidget, QColorDialog, QLabel, QLineEdit, QPushButton
 
-print('__file__={0:<35} | __name__={1:<20} | __package__={2:<20}'.format(__file__, __name__, str(__package__)))
-
 from res.ui import Ui_MainWindow
 from res.ui import Ui_MainWindow2
 from res.ui import Ui_MainWindow3
 from res.ui import Ui_MainWindow4
-from util import printHello
+from res.ui import Ui_MainWindow6
 from util import TestThread
+from util import printHello
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -294,6 +293,13 @@ class MainWindow5(QWidget):
         self.label_display.setText(self.settings.value('context'))
 
 
+class MainWindow6(QtWidgets.QMainWindow):
+    def __init__(self):
+        super(MainWindow6, self).__init__()
+        self.ui = Ui_MainWindow6()
+        self.ui.setupUi(self)
+
+
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])
     window = MainWindow()
@@ -302,5 +308,6 @@ if __name__ == '__main__':
     # window = MainWindow4()
     # window = colorSelector();
     # window = MainWindow5()
+    # window = MainWindow6()
     window.show()
     sys.exit(app.exec_())
