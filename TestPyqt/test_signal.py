@@ -1,5 +1,9 @@
 from PyQt5.QtCore import QObject, pyqtSignal
 
+"""
+ref: http://www.broadview.com.cn/article/824
+"""
+
 
 class CustSignal(QObject):
     # 声明无参数的信号
